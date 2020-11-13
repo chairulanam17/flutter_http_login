@@ -13,15 +13,15 @@ class LoginResponseModel {
 }
 
 class LoginRequestModel {
-  String email;
-  String password;
+  String siswa_username;
+  String siswa_password;
 
-  LoginRequestModel({this.email, this.password});
+  LoginRequestModel({this.siswa_username, this.siswa_password});
 
   Map<String, dynamic> toJson() {
     Map<String, dynamic> map = {
-      'email': email.trim(),
-      'password': password.trim(),
+      'email': siswa_username.trim(),
+      'password': siswa_password.trim(),
     };
 
     return map;

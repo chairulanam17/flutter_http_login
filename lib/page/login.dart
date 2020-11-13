@@ -67,7 +67,7 @@ class _LoginState extends State<Login> {
                         ),
                         new TextFormField(
                           keyboardType: TextInputType.emailAddress,
-                          onSaved: (input) => requestModel.email = input,
+                          onSaved: (input) => requestModel.siswa_username = input,
                           validator: (input) => !input.contains("@")
                               ? "Email Id should be Valid"
                               : null,
@@ -96,7 +96,7 @@ class _LoginState extends State<Login> {
                         ),
                         new TextFormField(
                           keyboardType: TextInputType.text,
-                          onSaved: (input) => requestModel.password = input,
+                          onSaved: (input) => requestModel.siswa_password = input,
                           validator: (input) => input.length < 3
                               ? "Password should be more than 3 characters"
                               : null,
