@@ -1,12 +1,16 @@
 class LoginResponseModel {
   final String token;
   final String error;
+  final String siswa_username;
+  final String siswa_password;
 
-  LoginResponseModel({this.token, this.error});
+  LoginResponseModel({this.token, this.error, this.siswa_username, this.siswa_password});
 
   factory LoginResponseModel.fromJson(Map<String, dynamic> json) {
     return LoginResponseModel(
       token: json["token"] != null ? json["token"] : "",
+      siswa_username: json["siswa_username"] != null ? json["siswa_username"] : "",
+      siswa_password: json["siswa_password"] != null ? json["siswa_password"] : "",
       error: json["error"] != null ? json["error"] : "",
     );
   }
